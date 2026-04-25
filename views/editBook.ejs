@@ -1,0 +1,54 @@
+<%- include('partials/header') %>
+
+<div class="form-container">
+    <h2 style="margin-bottom: 2rem; text-align: center;">Edit <span style="color: var(--primary);">Book Details</span></h2>
+    <form action="/edit/<%= book._id %>" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="title">Book Title</label>
+            <input type="text" id="title" name="title" value="<%= book.title %>" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="author">Author Name</label>
+            <input type="text" id="author" name="author" value="<%= book.author %>" required>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select id="category" name="category" required>
+                    <option value="Finance" <%= book.category === 'Finance' ? 'selected' : '' %>>Finance</option>
+                    <option value="Self-Help" <%= book.category === 'Self-Help' ? 'selected' : '' %>>Self-Help</option>
+                    <option value="Fiction" <%= book.category === 'Fiction' ? 'selected' : '' %>>Fiction</option>
+                    <option value="Technology" <%= book.category === 'Technology' ? 'selected' : '' %>>Technology</option>
+                    <option value="Biography" <%= book.category === 'Biography' ? 'selected' : '' %>>Biography</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="price">Price (₹)</label>
+                <input type="number" id="price" name="price" value="<%= book.price %>" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" name="quantity" value="<%= book.quantity %>" required>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" name="description" rows="4" required><%= book.description %></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Current Image</label>
+            <img src="/uploads/<%= book.image %>" alt="Current Cover" style="width: 100px; border-radius: 8px; margin-bottom: 1rem; display: block;">
+            <label for="image">Replace Image (Optional)</label>
+            <input type="file" id="image" name="image" accept="image/*">
+        </div>
+
+        <button type="submit" class="btn-submit">Update Book Details</button>
+    </form>
+</div>
+
+<%- include('partials/footer') %>
