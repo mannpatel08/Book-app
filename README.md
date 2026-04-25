@@ -3,6 +3,11 @@
 ## 📝 Problem Definition
 To create a web-based Book Store Management System using Node.js and Express.js that allows users to manage book records efficiently. The system uses MongoDB for storage, EJS for rendering, and Multer for image uploads, implementing full CRUD operations.
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1ebc30d4-e2ba-461e-aa74-4a3962a8351f" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/49f8e370-6d63-4dfa-a77d-730cec699be1" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/257c1a31-80c4-472f-8d78-de8e66dbaed2" />
+
+
 ## 📂 Folder Structure
 ```
 BOOK-STORE-APP/
